@@ -1,0 +1,3 @@
+[submodule "kicad-lib"]
+	path = kicad-lib
+	url = https://github.com/nuft/kicad-lib.git
