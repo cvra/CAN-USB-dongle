@@ -1,4 +1,4 @@
-update=2015 May 24, Sunday 18:09:15
+update=2015 June 30, Tuesday 17:33:11
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,5 @@ LibName30=_connectors
 LibName31=_linear-regulators
 LibName32=_stm32
 LibName33=_div
+LibName34=kicad-lib/components/_transceiver
+LibName35=kicad-lib/components/_power
