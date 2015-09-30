@@ -523,30 +523,6 @@ CAN1_TX
 Text Label 7750 5350 2    40   ~ 0
 CAN_SILENT
 $Comp
-L R R3
-U 1 1 5592CBE5
-P 4450 2600
-F 0 "R3" V 4530 2600 50  0000 C CNN
-F 1 "1.5k" V 4450 2600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" V 4380 2600 30  0001 C CNN
-F 3 "" H 4450 2600 30  0000 C CNN
-	1    4450 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L VCC #PWR021
-U 1 1 5592CC45
-P 4700 2600
-F 0 "#PWR021" H 4700 2450 50  0001 C CNN
-F 1 "VCC" H 4700 2750 50  0000 C CNN
-F 2 "" H 4700 2600 60  0000 C CNN
-F 3 "" H 4700 2600 60  0000 C CNN
-	1    4700 2600
-	1    0    0    -1  
-$EndComp
-Text Notes 4100 2900 0    60   ~ 0
-see AN2606\nSTM32F302x8\nBootloader configuration
-$Comp
 L GND #PWR022
 U 1 1 5592D611
 P 9850 4900
@@ -982,8 +958,6 @@ Wire Wire Line
 Wire Wire Line
 	7350 5250 7750 5250
 Wire Wire Line
-	4600 2600 4700 2600
-Wire Wire Line
 	9850 4850 9950 4850
 Wire Wire Line
 	9750 3750 9950 3750
@@ -1028,8 +1002,6 @@ Wire Wire Line
 	8850 2300 9100 2300
 Wire Wire Line
 	8850 2650 8850 2700
-Wire Wire Line
-	3600 2600 4300 2600
 Wire Wire Line
 	8850 2350 8850 2300
 Connection ~ 8850 2300
@@ -1160,7 +1132,7 @@ L R R?
 U 1 1 560C3883
 P 6300 3400
 F 0 "R?" V 6380 3400 50  0000 C CNN
-F 1 "1k5" V 6300 3400 50  0000 C CNN
+F 1 "1.5k" V 6300 3400 50  0000 C CNN
 F 2 "" V 6230 3400 30  0000 C CNN
 F 3 "" H 6300 3400 30  0000 C CNN
 	1    6300 3400
@@ -1183,7 +1155,7 @@ Wire Wire Line
 	6300 3550 6300 3850
 Connection ~ 6300 3850
 Text Notes 5200 3450 0    60   ~ 0
-pull D+ with 1.5K\nfor full speed device
+pull D+ with 1.5K\nfor full speed device\n(see AN2606)
 Text Notes 1850 7100 0    200  ~ 40
 PREVIEW VERSION!\nPINOUT CAN CHANGE
 NoConn ~ 3600 5000
