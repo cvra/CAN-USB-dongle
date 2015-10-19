@@ -1,4 +1,4 @@
-update=2015 August 19, Wednesday 16:24:49
+update=2015 October 15, Thursday 14:28:30
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../can-usb-dongle/kicad-lib/components
+LibDir=
 [eeschema/libraries]
 LibName1=can-usb-dongle-rescue
 LibName2=power
@@ -59,9 +59,10 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=_connectors
-LibName32=_linear-regulators
-LibName33=_stm32
-LibName34=_div
+LibName31=kicad-lib/components/_connectors
+LibName32=kicad-lib/components/_linear-regulators
+LibName33=kicad-lib/components/_stm32
+LibName34=kicad-lib/components/_div
 LibName35=kicad-lib/components/_transceiver
 LibName36=kicad-lib/components/_power
+LibName37=kicad-lib/components/cvra

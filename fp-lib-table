@@ -1,0 +1,13 @@
+(fp_lib_table
+  (lib (name _connectors)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_connectors.pretty")(options "")(descr ""))
+  (lib (name _div)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_div.pretty")(options "")(descr ""))
+  (lib (name _lqfp)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_lqfp.pretty")(options "")(descr ""))
+  (lib (name _mech)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_mech.pretty")(options "")(descr ""))
+  (lib (name _sensors)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_sensors.pretty")(options "")(descr ""))
+  (lib (name _std)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_std.pretty")(options "")(descr ""))
+  (lib (name Carte2014)(type Legacy)(uri "$(KIPRJMOD)/kicad-lib/footprints/Carte2014.mod")(options "")(descr ""))
+  (lib (name cvra)(type Legacy)(uri "$(KIPRJMOD)/kicad-lib/footprints/cvra.mod")(options "")(descr ""))
+  (lib (name inductors)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/inductors.pretty")(options "")(descr ""))
+  (lib (name _beaglebone)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_beaglebone.pretty")(options "")(descr ""))
+  (lib (name _logo)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_logo.pretty")(options "")(descr ""))
+)
