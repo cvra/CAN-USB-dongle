@@ -426,10 +426,8 @@ F 3 "" H 5100 1400 60  0000 C CNN
 $EndComp
 Text Label 6000 1450 2    40   ~ 0
 STATUS_LED
-Text Label 6000 1750 2    40   ~ 0
-CAN1_LED
 Text Label 3600 3200 0    40   ~ 0
-CAN1_LED
+CAN1_STATUS_LED
 $Comp
 L LED D2
 U 1 1 55622E77
@@ -636,7 +634,7 @@ F 3 "" H 9350 2500 60  0000 C CNN
 $EndComp
 Text Label 8100 2250 0    40   ~ 0
 V_BUS_ENABLE
-Text Label 3600 3300 0    40   ~ 0
+Text Label 3600 3400 0    40   ~ 0
 V_BUS_ENABLE
 $Comp
 L R R9
@@ -729,8 +727,6 @@ F 3 "" H 6900 2100 60  0000 C CNN
 	1    6900 2100
 	1    0    0    -1  
 $EndComp
-Text Label 6000 2050 2    40   ~ 0
-V_BUS
 Text Label 6350 3250 2    40   ~ 0
 V_BUS
 $Comp
@@ -837,7 +833,6 @@ NoConn ~ 3600 4300
 NoConn ~ 3600 4200
 NoConn ~ 3600 3600
 NoConn ~ 3600 3500
-NoConn ~ 3600 3400
 NoConn ~ 3600 2900
 NoConn ~ 3600 2200
 NoConn ~ 3600 2100
@@ -1160,17 +1155,6 @@ Wire Wire Line
 	5650 5300 5950 5300
 Wire Wire Line
 	5950 5200 5650 5200
-$Comp
-L CONN_01X04 CONN1
-U 1 1 56255440
-P 6150 5150
-F 0 "CONN1" H 6150 5400 50  0000 C CNN
-F 1 "UART" V 6250 5150 50  0000 C CNN
-F 2 "_connectors:Molex-PicoBlade-4" H 6150 5150 60  0001 C CNN
-F 3 "" H 6150 5150 60  0000 C CNN
-	1    6150 5150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 5100 5800 5050
 Wire Wire Line
@@ -1210,4 +1194,21 @@ Connection ~ 1850 3300
 Connection ~ 1850 3600
 Wire Wire Line
 	1850 3600 1850 3650
+Text Label 6000 2050 2    40   ~ 0
+CAN1_PWR_LED
+Text Label 3600 3300 0    40   ~ 0
+CAN1_PWR_LED
+Text Label 6000 1750 2    40   ~ 0
+CAN1_STATUS_LED
+$Comp
+L UART CONN1
+U 1 1 5626A8AF
+P 6300 5150
+F 0 "CONN1" H 6300 5500 50  0000 C CNN
+F 1 "UART" H 6300 4800 50  0000 C CNN
+F 2 "_connectors:Molex-PicoBlade-4" H 6300 5150 50  0001 C CNN
+F 3 "DOCUMENTATION" H 6300 5150 50  0001 C CNN
+	1    6300 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
