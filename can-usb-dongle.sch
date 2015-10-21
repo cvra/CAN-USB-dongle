@@ -426,7 +426,7 @@ F 3 "" H 5100 1400 60  0000 C CNN
 $EndComp
 Text Label 6000 1450 2    40   ~ 0
 STATUS_LED
-Text Label 4350 3250 0    40   ~ 0
+Text Label 3600 3500 0    40   ~ 0
 CAN1_STATUS_LED
 $Comp
 L LED D2
@@ -455,7 +455,7 @@ F 3 "" H 5800 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 9950 4750 2    40   ~ 0
-V_BUS
+V_CAN_BUS
 $Comp
 L VCC #PWR016
 U 1 1 5562945D
@@ -617,8 +617,8 @@ F 3 "" H 9450 3300 60  0000 C CNN
 	1    9450 3300
 	1    0    0    -1  
 $EndComp
-Text Label 10300 1950 2    40   ~ 0
-V_BUS
+Text Label 10450 1950 2    40   ~ 0
+V_CAN_BUS
 $Comp
 L GND-RESCUE-can-usb-dongle #PWR022
 U 1 1 55D31885
@@ -672,7 +672,7 @@ F 3 "DOCUMENTATION" H 10550 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 9950 5750 2    40   ~ 0
-V_BUS
+V_CAN_BUS
 $Comp
 L GND-RESCUE-can-usb-dongle #PWR024
 U 1 1 55D47D26
@@ -725,8 +725,8 @@ F 3 "" H 6900 2100 60  0000 C CNN
 	1    6900 2100
 	1    0    0    -1  
 $EndComp
-Text Label 6350 3250 2    40   ~ 0
-V_BUS
+Text Label 6450 3250 2    40   ~ 0
+V_CAN_BUS
 $Comp
 L R R3
 U 1 1 560BE6FC
@@ -826,8 +826,6 @@ NoConn ~ 3600 4600
 NoConn ~ 3600 4500
 NoConn ~ 3600 4400
 NoConn ~ 3600 4200
-NoConn ~ 3600 3600
-NoConn ~ 3600 3500
 NoConn ~ 3600 4100
 NoConn ~ 3600 2200
 NoConn ~ 3600 2100
@@ -976,7 +974,7 @@ Wire Wire Line
 Connection ~ 9250 1500
 Connection ~ 8550 1150
 Wire Wire Line
-	9950 1950 10300 1950
+	9950 1950 10450 1950
 Wire Wire Line
 	9300 2450 9400 2450
 Connection ~ 9350 2450
@@ -1029,7 +1027,7 @@ Connection ~ 6100 3650
 Wire Wire Line
 	6100 4100 6100 4050
 Wire Wire Line
-	6350 3250 6100 3250
+	6450 3250 6100 3250
 Wire Wire Line
 	7650 3800 8200 3800
 Wire Wire Line
@@ -1178,7 +1176,7 @@ Wire Wire Line
 	1850 3600 1850 3650
 Text Label 6000 2050 2    40   ~ 0
 CAN1_PWR_LED
-Text Label 4350 3400 0    40   ~ 0
+Text Label 3600 3600 0    40   ~ 0
 CAN1_PWR_LED
 Text Label 6000 1750 2    40   ~ 0
 CAN1_STATUS_LED
@@ -1197,19 +1195,15 @@ Wire Wire Line
 	8050 3500 8050 3700
 Connection ~ 8050 3700
 Wire Wire Line
-	9300 3700 9550 3700
+	9300 3700 9500 3700
 Wire Wire Line
-	9550 3700 9550 3800
+	9500 3700 9600 3800
 Wire Wire Line
-	9550 3800 9850 3800
+	9600 3800 9850 3800
 Wire Wire Line
 	9850 3700 9600 3700
 Wire Wire Line
-	9600 3700 9600 3750
-Wire Wire Line
-	9600 3750 9500 3750
-Wire Wire Line
-	9500 3750 9500 3800
+	9600 3700 9500 3800
 Wire Wire Line
 	9500 3800 9300 3800
 Wire Wire Line
