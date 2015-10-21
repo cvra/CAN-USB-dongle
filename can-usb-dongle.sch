@@ -291,9 +291,9 @@ Text Label 3600 2500 0    40   ~ 0
 USB_D-
 Text Label 3600 2600 0    40   ~ 0
 USB_D+
-Text Label 7650 3700 0    40   ~ 0
-USB_D-
 Text Label 7650 3800 0    40   ~ 0
+USB_D-
+Text Label 7650 3700 0    40   ~ 0
 USB_D+
 Text Label 9100 3300 0    40   ~ 0
 V_USB
@@ -339,12 +339,12 @@ $EndComp
 $Comp
 L R R6
 U 1 1 55622F4C
-P 6650 1750
-F 0 "R6" V 6730 1750 50  0000 C CNN
-F 1 "R" V 6650 1750 50  0000 C CNN
-F 2 "_std:_0603" V 6580 1750 30  0001 C CNN
-F 3 "" H 6650 1750 30  0000 C CNN
-	1    6650 1750
+P 6150 1750
+F 0 "R6" V 6230 1750 50  0000 C CNN
+F 1 "R" V 6150 1750 50  0000 C CNN
+F 2 "_std:_0603" V 6080 1750 30  0001 C CNN
+F 3 "" H 6150 1750 30  0000 C CNN
+	1    6150 1750
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -361,23 +361,23 @@ $EndComp
 $Comp
 L LED D1
 U 1 1 55624274
-P 6200 1450
-F 0 "D1" H 6200 1550 50  0000 C CNN
-F 1 "STATUS" H 6200 1350 50  0000 C CNN
-F 2 "_std:_0603" H 6200 1450 60  0001 C CNN
-F 3 "" H 6200 1450 60  0000 C CNN
-	1    6200 1450
+P 6600 1450
+F 0 "D1" H 6600 1550 50  0000 C CNN
+F 1 "STATUS" H 6600 1350 50  0000 C CNN
+F 2 "_std:_0603" H 6600 1450 60  0001 C CNN
+F 3 "" H 6600 1450 60  0000 C CNN
+	1    6600 1450
 	-1   0    0    1   
 $EndComp
 $Comp
 L R R5
 U 1 1 5562427A
-P 6650 1450
-F 0 "R5" V 6730 1450 50  0000 C CNN
-F 1 "R" V 6650 1450 50  0000 C CNN
-F 2 "_std:_0603" V 6580 1450 30  0001 C CNN
-F 3 "" H 6650 1450 30  0000 C CNN
-	1    6650 1450
+P 6150 1450
+F 0 "R5" V 6230 1450 50  0000 C CNN
+F 1 "R" V 6150 1450 50  0000 C CNN
+F 2 "_std:_0603" V 6080 1450 30  0001 C CNN
+F 3 "" H 6150 1450 30  0000 C CNN
+	1    6150 1450
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -426,17 +426,17 @@ F 3 "" H 5100 1400 60  0000 C CNN
 $EndComp
 Text Label 6000 1450 2    40   ~ 0
 STATUS_LED
-Text Label 3600 3200 0    40   ~ 0
+Text Label 4350 3250 0    40   ~ 0
 CAN1_STATUS_LED
 $Comp
 L LED D2
 U 1 1 55622E77
-P 6200 1750
-F 0 "D2" H 6200 1850 50  0000 C CNN
-F 1 "CAN1" H 6200 1650 50  0000 C CNN
-F 2 "_std:_0603" H 6200 1750 60  0001 C CNN
-F 3 "" H 6200 1750 60  0000 C CNN
-	1    6200 1750
+P 6600 1750
+F 0 "D2" H 6600 1850 50  0000 C CNN
+F 1 "CAN1" H 6600 1650 50  0000 C CNN
+F 2 "_std:_0603" H 6600 1750 60  0001 C CNN
+F 3 "" H 6600 1750 60  0000 C CNN
+	1    6600 1750
 	-1   0    0    1   
 $EndComp
 Text Label 5050 5200 0    40   ~ 0
@@ -500,8 +500,6 @@ F 3 "" H 8450 5700 60  0000 C CNN
 	1    8450 5700
 	1    0    0    -1  
 $EndComp
-Text Label 7450 4950 0    40   ~ 0
-V_USB
 $Comp
 L VCC #PWR018
 U 1 1 5592BB1F
@@ -530,13 +528,13 @@ F 3 "" H 9850 4900 60  0000 C CNN
 	1    9850 4900
 	1    0    0    -1  
 $EndComp
-Text Label 3600 4100 0    40   ~ 0
+Text Label 3600 3400 0    40   ~ 0
 CAN_SILENT
 Text Label 3600 3800 0    40   ~ 0
 UART1_RX
 Text Label 3600 3700 0    40   ~ 0
 UART1_TX
-Text Label 3600 3100 0    40   ~ 0
+Text Label 3600 4300 0    40   ~ 0
 STATUS_LED
 Text Notes 3900 1100 0    60   ~ 0
 enter dfu bootloader\nby pressing the button\nwhile plugging in the dongle
@@ -634,7 +632,7 @@ F 3 "" H 9350 2500 60  0000 C CNN
 $EndComp
 Text Label 8100 2250 0    40   ~ 0
 V_BUS_ENABLE
-Text Label 3600 3400 0    40   ~ 0
+Text Label 3600 2900 0    40   ~ 0
 V_BUS_ENABLE
 $Comp
 L R R9
@@ -697,23 +695,23 @@ Author: Michael Spieler\nReview: -
 $Comp
 L LED D3
 U 1 1 560BDA9A
-P 6200 2050
-F 0 "D3" H 6200 2150 50  0000 C CNN
-F 1 "V_BUS_PWR" H 6200 1950 50  0000 C CNN
-F 2 "_std:_0603" H 6200 2050 60  0001 C CNN
-F 3 "" H 6200 2050 60  0000 C CNN
-	1    6200 2050
+P 6600 2050
+F 0 "D3" H 6600 2150 50  0000 C CNN
+F 1 "V_BUS_PWR" H 6600 1950 50  0000 C CNN
+F 2 "_std:_0603" H 6600 2050 60  0001 C CNN
+F 3 "" H 6600 2050 60  0000 C CNN
+	1    6600 2050
 	-1   0    0    1   
 $EndComp
 $Comp
 L R R7
 U 1 1 560BDAA0
-P 6650 2050
-F 0 "R7" V 6730 2050 50  0000 C CNN
-F 1 "R" V 6650 2050 50  0000 C CNN
-F 2 "_std:_0603" V 6580 2050 30  0001 C CNN
-F 3 "" H 6650 2050 30  0000 C CNN
-	1    6650 2050
+P 6150 2050
+F 0 "R7" V 6230 2050 50  0000 C CNN
+F 1 "R" V 6150 2050 50  0000 C CNN
+F 2 "_std:_0603" V 6080 2050 30  0001 C CNN
+F 3 "" H 6150 2050 30  0000 C CNN
+	1    6150 2050
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -794,7 +792,7 @@ U 1 1 560C1FE3
 P 10200 3850
 F 0 "CONN3" H 10200 4250 60  0000 C CNN
 F 1 "MICRO_USB" H 10250 3450 60  0000 C CNN
-F 2 "_connectors:_Micro-USB-AB-receptacle-SMT-th" H 10200 3850 60  0001 C CNN
+F 2 "_connectors:_Micro-USB-AB-receptacle-SMT-th-no-slot" H 10200 3850 60  0001 C CNN
 F 3 "" H 10200 3850 60  0000 C CNN
 	1    10200 3850
 	1    0    0    -1  
@@ -824,16 +822,13 @@ $EndComp
 Text Notes 8150 3300 0    60   ~ 0
 pull D+ with 1.5K\nfor full speed device\n(see AN2606)
 NoConn ~ 3600 5000
-NoConn ~ 3600 4900
-NoConn ~ 3600 4800
 NoConn ~ 3600 4600
 NoConn ~ 3600 4500
 NoConn ~ 3600 4400
-NoConn ~ 3600 4300
 NoConn ~ 3600 4200
 NoConn ~ 3600 3600
 NoConn ~ 3600 3500
-NoConn ~ 3600 2900
+NoConn ~ 3600 4100
 NoConn ~ 3600 2200
 NoConn ~ 3600 2100
 NoConn ~ 3600 2000
@@ -938,8 +933,6 @@ Connection ~ 1550 2200
 Connection ~ 1300 2200
 Wire Wire Line
 	6800 1450 6900 1450
-Wire Wire Line
-	6400 1450 6500 1450
 Connection ~ 4300 1400
 Wire Wire Line
 	5000 1400 5100 1400
@@ -954,8 +947,6 @@ Connection ~ 2100 2100
 Connection ~ 2100 2000
 Connection ~ 2100 1900
 Connection ~ 2100 1700
-Wire Wire Line
-	6400 1750 6500 1750
 Wire Wire Line
 	6800 1750 6900 1750
 Wire Wire Line
@@ -1023,8 +1014,6 @@ Wire Wire Line
 Wire Wire Line
 	6800 2050 6900 2050
 Wire Wire Line
-	6400 2050 6500 2050
-Wire Wire Line
 	6900 2050 6900 2100
 Wire Wire Line
 	9550 5950 9550 4950
@@ -1042,13 +1031,9 @@ Wire Wire Line
 Wire Wire Line
 	6350 3250 6100 3250
 Wire Wire Line
-	7650 3700 8200 3700
-Wire Wire Line
-	9300 3700 9850 3700
-Wire Wire Line
-	9300 3800 9850 3800
-Wire Wire Line
 	7650 3800 8200 3800
+Wire Wire Line
+	7650 3700 8200 3700
 Connection ~ 9800 3600
 Wire Wire Line
 	9800 3600 9800 3450
@@ -1076,9 +1061,6 @@ Wire Wire Line
 	9550 3300 9550 3600
 Connection ~ 9550 3600
 Connection ~ 9550 3900
-Connection ~ 8050 3800
-Wire Wire Line
-	8050 3500 8050 3800
 Wire Wire Line
 	7600 4500 7750 4500
 Wire Wire Line
@@ -1196,7 +1178,7 @@ Wire Wire Line
 	1850 3600 1850 3650
 Text Label 6000 2050 2    40   ~ 0
 CAN1_PWR_LED
-Text Label 3600 3300 0    40   ~ 0
+Text Label 4350 3400 0    40   ~ 0
 CAN1_PWR_LED
 Text Label 6000 1750 2    40   ~ 0
 CAN1_STATUS_LED
@@ -1211,4 +1193,36 @@ F 3 "DOCUMENTATION" H 6300 5150 50  0001 C CNN
 	1    6300 5150
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8050 3500 8050 3700
+Connection ~ 8050 3700
+Wire Wire Line
+	9300 3700 9550 3700
+Wire Wire Line
+	9550 3700 9550 3800
+Wire Wire Line
+	9550 3800 9850 3800
+Wire Wire Line
+	9850 3700 9600 3700
+Wire Wire Line
+	9600 3700 9600 3750
+Wire Wire Line
+	9600 3750 9500 3750
+Wire Wire Line
+	9500 3750 9500 3800
+Wire Wire Line
+	9500 3800 9300 3800
+Wire Wire Line
+	6300 1750 6400 1750
+Wire Wire Line
+	6300 1450 6400 1450
+Wire Wire Line
+	6300 2050 6400 2050
+NoConn ~ 3600 3300
+NoConn ~ 3600 3200
+NoConn ~ 3600 3100
+NoConn ~ 3600 4800
+NoConn ~ 3600 4900
+Text Label 7450 4950 0    40   ~ 0
+V_USB
 $EndSCHEMATC
