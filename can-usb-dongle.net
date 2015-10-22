@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/mi/workspace/can-usb-dongle/can-usb-dongle.sch)
-    (date "2015 October 21, Wednesday 22:13:45")
+    (date "2015 October 23, Friday 00:00:32")
     (tool "Eeschema (2015-10-14 BZR 6267)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -166,7 +166,7 @@
       (tstamp 55D2FE2A))
     (comp (ref F1)
       (value 500mA)
-      (footprint _std:_0603)
+      (footprint Resistors_SMD:R_0805)
       (libsource (lib device) (part F_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 55D30CFC))
@@ -275,6 +275,32 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5626A8AF)))
   (libparts
+    (libpart (lib device) (part F_Small)
+      (description Fuse)
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) F)
+        (field (name Value) F_Small))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name K) (type passive))
+        (pin (num 2) (name A) (type passive))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
@@ -298,6 +324,20 @@
         (pin (num 3) (name CANH) (type BiDi))
         (pin (num 4) (name CANL) (type BiDi))
         (pin (num MECH) (name GND) (type power_in))))
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib _connectors) (part MICRO_USB)
       (fields
         (field (name Reference) CONN)
@@ -431,6 +471,14 @@
         (pin (num 2) (name case) (type input))
         (pin (num 3) (name ~) (type input))
         (pin (num 4) (name case) (type input))))
+    (libpart (lib device) (part SW_PUSH)
+      (description Button)
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) SW_PUSH))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
     (libpart (lib _transceiver) (part SN65HVD256)
       (fields
         (field (name Reference) U)
@@ -445,68 +493,20 @@
         (pin (num 5) (name V_RXD) (type input))
         (pin (num 6) (name CANL) (type BiDi))
         (pin (num 7) (name CANH) (type BiDi))
-        (pin (num 8) (name S) (type input))))
-    (libpart (lib device) (part SW_PUSH)
-      (description Button)
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SW_PUSH))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
-    (libpart (lib device) (part LED)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) LED))
-      (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name A) (type passive))))
-    (libpart (lib device) (part F_Small)
-      (description Fuse)
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) F)
-        (field (name Value) F_Small))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive)))))
+        (pin (num 8) (name S) (type input)))))
   (libraries
-    (library (logical _linear-regulators)
-      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_linear-regulators.lib))
+    (library (logical device)
+      (uri "/Library/Application Support/kicad/library/device.lib"))
+    (library (logical _connectors)
+      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_connectors.lib))
     (library (logical _stm32)
       (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_stm32.lib))
+    (library (logical _linear-regulators)
+      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_linear-regulators.lib))
     (library (logical _div)
       (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_div.lib))
     (library (logical _transceiver)
-      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_transceiver.lib))
-    (library (logical _connectors)
-      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_connectors.lib))
-    (library (logical device)
-      (uri "/Library/Application Support/kicad/library/device.lib")))
+      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_transceiver.lib)))
   (nets
     (net (code 1) (name /SWDIO)
       (node (ref U1) (pin 34))
