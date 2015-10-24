@@ -537,7 +537,7 @@ UART1_TX
 Text Label 3600 4300 0    40   ~ 0
 STATUS_LED
 Text Notes 3900 1100 0    60   ~ 0
-enter dfu bootloader\nby pressing the button\nwhile plugging in the dongle
+enter dfu bootloader\nby pressing the button\nwhen plugging in the dongle
 $Comp
 L SiP32431 U5
 U 1 1 559440D2
