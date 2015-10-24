@@ -426,7 +426,7 @@ F 3 "" H 5100 1400 60  0000 C CNN
 $EndComp
 Text Label 6000 1450 2    40   ~ 0
 STATUS_LED
-Text Label 3600 3500 0    40   ~ 0
+Text Label 3600 3400 0    40   ~ 0
 CAN1_STATUS_LED
 $Comp
 L LED D2
@@ -528,7 +528,7 @@ F 3 "" H 9850 4900 60  0000 C CNN
 	1    9850 4900
 	1    0    0    -1  
 $EndComp
-Text Label 3600 3400 0    40   ~ 0
+Text Label 3600 3500 0    40   ~ 0
 CAN_SILENT
 Text Label 3600 3800 0    40   ~ 0
 UART1_RX
@@ -632,7 +632,7 @@ F 3 "" H 9350 2500 60  0000 C CNN
 $EndComp
 Text Label 8100 2250 0    40   ~ 0
 V_BUS_ENABLE
-Text Label 3600 2900 0    40   ~ 0
+Text Label 3600 3600 0    40   ~ 0
 V_BUS_ENABLE
 $Comp
 L R R9
@@ -1176,7 +1176,7 @@ Wire Wire Line
 	1850 3600 1850 3650
 Text Label 6000 2050 2    40   ~ 0
 CAN1_PWR_LED
-Text Label 3600 3600 0    40   ~ 0
+Text Label 3600 2900 0    40   ~ 0
 CAN1_PWR_LED
 Text Label 6000 1750 2    40   ~ 0
 CAN1_STATUS_LED
