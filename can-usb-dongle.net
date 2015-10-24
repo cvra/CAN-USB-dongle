@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/mi/workspace/can-usb-dongle/can-usb-dongle.sch)
-    (date "2015 October 23, Friday 00:00:32")
+    (date "2015 October 24, Saturday 20:09:40")
     (tool "Eeschema (2015-10-14 BZR 6267)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -148,7 +148,7 @@
       (tstamp 559440D2))
     (comp (ref U4)
       (value MCP1700)
-      (footprint Housings_SOT-23_SOT-143_TSOT-6:SOT-23)
+      (footprint _std:SOT-23)
       (libsource (lib _linear-regulators) (part MCP1700))
       (sheetpath (names /) (tstamps /))
       (tstamp 55D2FCCD))
@@ -215,7 +215,7 @@
       (tstamp 560BF88C))
     (comp (ref CONN3)
       (value MICRO_USB)
-      (footprint _connectors:_Micro-USB-AB-receptacle-SMT-th-no-slot)
+      (footprint _connectors:_Micro-USB-AB-receptacle-SMT-th)
       (libsource (lib _connectors) (part MICRO_USB))
       (sheetpath (names /) (tstamps /))
       (tstamp 560C1FE3))
@@ -275,32 +275,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5626A8AF)))
   (libparts
-    (libpart (lib device) (part F_Small)
-      (description Fuse)
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) F)
-        (field (name Value) F_Small))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part LED)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) LED))
-      (pins
-        (pin (num 1) (name K) (type passive))
-        (pin (num 2) (name A) (type passive))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
@@ -312,18 +286,15 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib _connectors) (part CAN)
+    (libpart (lib _div) (part XTAL-SMD-4-PADS)
       (fields
-        (field (name Reference) CONN)
-        (field (name Value) CAN)
-        (field (name Footprint) MODULE)
-        (field (name Datasheet) DOCUMENTATION))
+        (field (name Reference) X)
+        (field (name Value) XTAL-SMD-4-PADS))
       (pins
-        (pin (num 1) (name VCC) (type power_in))
-        (pin (num 2) (name GND) (type power_in))
-        (pin (num 3) (name CANH) (type BiDi))
-        (pin (num 4) (name CANL) (type BiDi))
-        (pin (num MECH) (name GND) (type power_in))))
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name case) (type input))
+        (pin (num 3) (name ~) (type input))
+        (pin (num 4) (name case) (type input))))
     (libpart (lib device) (part C)
       (description "Unpolarized capacitor")
       (footprints
@@ -338,6 +309,50 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part SW_PUSH)
+      (description Button)
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) SW_PUSH))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib _div) (part SiP32431)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) SiP32431)
+        (field (name Footprint) MODULE)
+        (field (name Datasheet) Switch))
+      (pins
+        (pin (num 1) (name OUT) (type power_out))
+        (pin (num 2) (name GND) (type power_in))
+        (pin (num 3) (name ON/OFF) (type input))
+        (pin (num 4) (name IN) (type power_in))
+        (pin (num 5) (name GND) (type power_in))
+        (pin (num 6) (name NC) (type NotConnected))))
+    (libpart (lib _div) (part NUF2042XV6)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) NUF2042XV6))
+      (pins
+        (pin (num 1) (name D1_I) (type input))
+        (pin (num 2) (name GND) (type input))
+        (pin (num 3) (name D2_I) (type input))
+        (pin (num 4) (name D2_O) (type input))
+        (pin (num 5) (name V_BUS) (type input))
+        (pin (num 6) (name D1_O) (type input))))
+    (libpart (lib _connectors) (part CAN)
+      (fields
+        (field (name Reference) CONN)
+        (field (name Value) CAN)
+        (field (name Footprint) MODULE)
+        (field (name Datasheet) DOCUMENTATION))
+      (pins
+        (pin (num 1) (name VCC) (type power_in))
+        (pin (num 2) (name GND) (type power_in))
+        (pin (num 3) (name CANH) (type BiDi))
+        (pin (num 4) (name CANL) (type BiDi))
+        (pin (num MECH) (name GND) (type power_in))))
     (libpart (lib _connectors) (part MICRO_USB)
       (fields
         (field (name Reference) CONN)
@@ -438,47 +453,6 @@
         (pin (num 46) (name PB9) (type BiDi))
         (pin (num 47) (name VSS_1) (type BiDi))
         (pin (num 48) (name VDD_1) (type BiDi))))
-    (libpart (lib _div) (part NUF2042XV6)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) NUF2042XV6))
-      (pins
-        (pin (num 1) (name D1_I) (type input))
-        (pin (num 2) (name GND) (type input))
-        (pin (num 3) (name D2_I) (type input))
-        (pin (num 4) (name D2_O) (type input))
-        (pin (num 5) (name V_BUS) (type input))
-        (pin (num 6) (name D1_O) (type input))))
-    (libpart (lib _div) (part SiP32431)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) SiP32431)
-        (field (name Footprint) MODULE)
-        (field (name Datasheet) Switch))
-      (pins
-        (pin (num 1) (name OUT) (type power_out))
-        (pin (num 2) (name GND) (type power_in))
-        (pin (num 3) (name ON/OFF) (type input))
-        (pin (num 4) (name IN) (type power_in))
-        (pin (num 5) (name GND) (type power_in))
-        (pin (num 6) (name NC) (type NotConnected))))
-    (libpart (lib _div) (part XTAL-SMD-4-PADS)
-      (fields
-        (field (name Reference) X)
-        (field (name Value) XTAL-SMD-4-PADS))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name case) (type input))
-        (pin (num 3) (name ~) (type input))
-        (pin (num 4) (name case) (type input))))
-    (libpart (lib device) (part SW_PUSH)
-      (description Button)
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SW_PUSH))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
     (libpart (lib _transceiver) (part SN65HVD256)
       (fields
         (field (name Reference) U)
@@ -493,16 +467,42 @@
         (pin (num 5) (name V_RXD) (type input))
         (pin (num 6) (name CANL) (type BiDi))
         (pin (num 7) (name CANH) (type BiDi))
-        (pin (num 8) (name S) (type input)))))
+        (pin (num 8) (name S) (type input))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name K) (type passive))
+        (pin (num 2) (name A) (type passive))))
+    (libpart (lib device) (part F_Small)
+      (description Fuse)
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) F)
+        (field (name Value) F_Small))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive)))))
   (libraries
     (library (logical device)
       (uri "/Library/Application Support/kicad/library/device.lib"))
-    (library (logical _connectors)
-      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_connectors.lib))
-    (library (logical _stm32)
-      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_stm32.lib))
     (library (logical _linear-regulators)
       (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_linear-regulators.lib))
+    (library (logical _stm32)
+      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_stm32.lib))
+    (library (logical _connectors)
+      (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_connectors.lib))
     (library (logical _div)
       (uri /Users/mi/workspace/can-usb-dongle/kicad-lib/components/_div.lib))
     (library (logical _transceiver)
