@@ -689,9 +689,9 @@ CAN to USB adapter dongle
 Text Notes 10750 7650 0    60   ~ 12
 A
 Text Notes 8200 7650 0    60   ~ 0
-19.08.2015
+25.10.2015
 Text Notes 7050 7100 0    60   ~ 0
-Author: Michael Spieler\nReview: -
+Author: Michael Spieler
 $Comp
 L LED D3
 U 1 1 560BDA9A
