@@ -1,4 +1,4 @@
-update=2015 October 15, Thursday 14:28:30
+update=2015 October 25, Sunday 20:06:02
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -66,3 +64,6 @@ LibName34=kicad-lib/components/_div
 LibName35=kicad-lib/components/_transceiver
 LibName36=kicad-lib/components/_power
 LibName37=kicad-lib/components/cvra
+LibName38=kicad-lib/components/logo
+[general]
+version=1
