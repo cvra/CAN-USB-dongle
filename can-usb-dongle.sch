@@ -687,7 +687,7 @@ $EndComp
 Text Notes 7400 7500 0    60   ~ 12
 CAN to USB adapter dongle
 Text Notes 10750 7650 0    60   ~ 12
-A
+B
 Text Notes 8200 7650 0    60   ~ 0
 25.10.2015
 Text Notes 7050 7100 0    60   ~ 0
