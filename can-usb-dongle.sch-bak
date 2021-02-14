@@ -168,9 +168,9 @@ F 3 "" H 5650 1300 60  0000 C CNN
 	1    5650 1300
 	-1   0    0    1   
 $EndComp
-Text Label 8050 6200 0    40   ~ 0
+Text Label 7700 6200 0    40   ~ 0
 UART1_TX
-Text Label 8050 6100 0    40   ~ 0
+Text Label 7700 6100 0    40   ~ 0
 UART1_RX
 $Comp
 L can-usb-dongle-rescue:GND-RESCUE-can-usb-dongle #PWR028
@@ -593,6 +593,8 @@ Wire Wire Line
 	4000 2950 3500 2950
 Wire Wire Line
 	1800 3650 2200 3650
+Wire Wire Line
+	1800 3550 2200 3550
 Text Label 4000 2950 2    50   ~ 0
 BTN
 Text Label 2000 2050 0    50   ~ 0
@@ -634,9 +636,9 @@ Text Label 4000 3150 2    40   ~ 0
 V_BUS_SENSE
 Text Label 3950 3450 2    40   ~ 0
 V_BUS_ENABLE
-Text Label 1250 3550 0    40   ~ 0
+Text Label 1800 3550 0    40   ~ 0
 UART1_TX
-Text Label 1250 3650 0    40   ~ 0
+Text Label 1800 3650 0    40   ~ 0
 UART1_RX
 Text Label 4000 3050 2    40   ~ 0
 CAN_EN
@@ -692,14 +694,33 @@ $EndComp
 $Comp
 L Device:R_Small R9
 U 1 1 6054B287
-P 1700 3650
-F 0 "R9" V 1504 3650 50  0000 C CNN
-F 1 "100" V 1595 3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 1700 3650 50  0001 C CNN
-F 3 "~" H 1700 3650 50  0001 C CNN
-	1    1700 3650
+P 8150 6100
+F 0 "R9" V 7954 6100 50  0000 C CNN
+F 1 "100" V 8045 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8150 6100 50  0001 C CNN
+F 3 "~" H 8150 6100 50  0001 C CNN
+	1    8150 6100
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 6054BA13
+P 8150 6200
+F 0 "R10" V 8254 6200 50  0000 C CNN
+F 1 "100" V 8345 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8150 6200 50  0001 C CNN
+F 3 "~" H 8150 6200 50  0001 C CNN
+	1    8150 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 6100 8050 6100
+Wire Wire Line
+	7700 6200 8050 6200
+Wire Wire Line
+	8250 6200 8450 6200
+Wire Wire Line
+	8450 6100 8250 6100
 $Comp
 L power:+3.3V #PWR021
 U 1 1 60576C6D
@@ -1715,25 +1736,4 @@ NoConn ~ 3500 3550
 Wire Wire Line
 	3900 3950 3500 3950
 NoConn ~ 3500 3650
-Wire Wire Line
-	8050 6100 8450 6100
-Wire Wire Line
-	8050 6200 8450 6200
-Wire Wire Line
-	1800 3550 2200 3550
-$Comp
-L Device:R_Small R10
-U 1 1 6054BA13
-P 1700 3550
-F 0 "R10" V 1900 3550 50  0000 C CNN
-F 1 "100" V 1800 3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 1700 3550 50  0001 C CNN
-F 3 "~" H 1700 3550 50  0001 C CNN
-	1    1700 3550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1250 3550 1600 3550
-Wire Wire Line
-	1600 3650 1250 3650
 $EndSCHEMATC

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name can-usb-dongle-rescue)(type Legacy)(uri ${KIPRJMOD}/can-usb-dongle-rescue.lib)(options "")(descr ""))
+  (lib (name can-usb-dongle)(type Legacy)(uri ${KIPRJMOD}/can-usb-dongle.lib)(options "")(descr ""))
+)
