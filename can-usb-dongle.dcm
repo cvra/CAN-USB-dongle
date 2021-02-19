@@ -1,3 +1,12 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AP2151DWG-7
+F https://www.diodes.com/assets/Datasheets/AP2141D_51D.pdf
+$ENDCMP
+#
+$CMP STF202
+D USB Filter with ESD Protection
+F https://datasheet.lcsc.com/szlcsc/1809041135_ON-Semiconductor-STF202-22T1G_C233431.pdf
+$ENDCMP
+#
 #End Doc Library

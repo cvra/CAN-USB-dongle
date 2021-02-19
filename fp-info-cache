@@ -1,4 +1,4 @@
-19249280568884807
+19250894149676807
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -2281,6 +2281,13 @@ TS-1187A-B-A-B
 0
 4
 4
+CAN-USB-dongle
+TYPEC-304S-ACP16
+
+
+0
+16
+13
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
