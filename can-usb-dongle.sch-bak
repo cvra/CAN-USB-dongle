@@ -117,12 +117,12 @@ $EndComp
 $Comp
 L can-usb-dongle-rescue:GND-RESCUE-can-usb-dongle #PWR015
 U 1 1 55624C2B
-P 1000 7200
-F 0 "#PWR015" H 1000 6950 50  0001 C CNN
-F 1 "GND" H 1000 7100 50  0000 C CNN
-F 2 "" H 1000 7200 60  0000 C CNN
-F 3 "" H 1000 7200 60  0000 C CNN
-	1    1000 7200
+P 1250 7550
+F 0 "#PWR015" H 1250 7300 50  0001 C CNN
+F 1 "GND" H 1250 7450 50  0000 C CNN
+F 2 "" H 1250 7550 60  0000 C CNN
+F 3 "" H 1250 7550 60  0000 C CNN
+	1    1250 7550
 	1    0    0    -1  
 $EndComp
 Text Label 7700 6200 0    40   ~ 0
@@ -146,7 +146,7 @@ Text Label 5300 5500 0    40   ~ 0
 CAN1_TX
 Text Label 5300 5700 0    40   ~ 0
 CAN_EN
-Text Notes 700  7650 0    60   ~ 0
+Text Notes 500  6600 0    60   ~ 0
 enter dfu bootloader\nby pressing the button\nwhen plugging in the dongle
 $Comp
 L Regulator_Linear:MCP1700-3302E_SOT23 U2
@@ -384,27 +384,27 @@ Wire Wire Line
 	2950 7200 3150 7200
 Wire Wire Line
 	3050 7550 3150 7550
-Text Label 750  6800 0    40   ~ 0
+Text Label 1000 7150 0    40   ~ 0
 BTN
 Wire Wire Line
-	750  6800 1000 6800
+	1000 7150 1250 7150
 $Comp
 L Device:R R8
 U 1 1 602279AB
-P 1000 7000
-F 0 "R8" H 930 7046 50  0000 R CNN
-F 1 "10k" H 930 6955 50  0000 R CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 930 7000 50  0001 C CNN
-F 3 "~" H 1000 7000 50  0001 C CNN
-F 4 "C25744" H 1000 7000 50  0001 C CNN "lcsc"
-	1    1000 7000
+P 1250 7350
+F 0 "R8" H 1180 7396 50  0000 R CNN
+F 1 "10k" H 1180 7305 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1180 7350 50  0001 C CNN
+F 3 "~" H 1250 7350 50  0001 C CNN
+F 4 "C25744" H 1250 7350 50  0001 C CNN "lcsc"
+	1    1250 7350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 7150 1000 7200
+	1250 7500 1250 7550
 Wire Wire Line
-	1000 6850 1000 6800
-Connection ~ 1000 6800
+	1250 7200 1250 7150
+Connection ~ 1250 7150
 Wire Wire Line
 	3850 3750 4200 3750
 Wire Wire Line
@@ -613,16 +613,16 @@ SWCLK
 $Comp
 L power:+3.3V #PWR020
 U 1 1 6050BE5D
-P 1750 6750
-F 0 "#PWR020" H 1750 6600 50  0001 C CNN
-F 1 "+3.3V" H 1765 6923 50  0000 C CNN
-F 2 "" H 1750 6750 50  0001 C CNN
-F 3 "" H 1750 6750 50  0001 C CNN
-	1    1750 6750
+P 2000 7100
+F 0 "#PWR020" H 2000 6950 50  0001 C CNN
+F 1 "+3.3V" H 2015 7273 50  0000 C CNN
+F 2 "" H 2000 7100 50  0001 C CNN
+F 3 "" H 2000 7100 50  0001 C CNN
+	1    2000 7100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 6750 1750 6800
+	2000 7100 2000 7150
 $Comp
 L power:GND #PWR023
 U 1 1 60537A96
@@ -1085,8 +1085,8 @@ F 3 "" H 6750 7000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 7050 6750 7000
-Text Notes 600  850  0    50   ~ 0
-Revision history:\n1 - Initial implementation\n2 - Add a missing trace for one LED\n3 - USB-C, design for automated assembly, SWD out\n\n
+Text Notes 500  2050 0    50   ~ 0
+Features:\n\n* CAN interface\n* USB-C connector\n* Dual JST CAN connector for daisy chain\n* Dual Picoblade CAN connector for daisy chain\n* Standard SLCAN protocol (virtual serial port)\n* Supports USB flashing through DFU\n* Can power the CAN bus devices\n* UART connector for USB - Serial adapter functionality\n* SWD output to be used as a debugger with\n  Black Magic Probe firmware (software TBD)\n* Costs < 20 USD in components.\n\nRevision history:\n1 - Initial implementation\n2 - Add a missing trace for one LED\n3 - USB-C, design for automated assembly, SWD out\n\n
 Wire Wire Line
 	3900 7450 3900 7550
 $Comp
@@ -1133,23 +1133,23 @@ NoConn ~ 6850 4000
 Wire Wire Line
 	6850 3000 7300 3000
 Wire Wire Line
-	1150 6900 1100 6900
+	1400 7250 1350 7250
 Wire Wire Line
-	1100 6900 1100 6800
+	1350 7250 1350 7150
 Wire Wire Line
-	1000 6800 1100 6800
+	1250 7150 1350 7150
 Wire Wire Line
-	1100 6800 1150 6800
-Connection ~ 1100 6800
+	1350 7150 1400 7150
+Connection ~ 1350 7150
 Wire Wire Line
-	1550 6900 1600 6900
+	1800 7250 1850 7250
 Wire Wire Line
-	1600 6900 1600 6800
+	1850 7250 1850 7150
 Wire Wire Line
-	1600 6800 1550 6800
+	1850 7150 1800 7150
 Wire Wire Line
-	1600 6800 1750 6800
-Connection ~ 1600 6800
+	1850 7150 2000 7150
+Connection ~ 1850 7150
 Wire Wire Line
 	9950 1400 10150 1400
 NoConn ~ 5550 2700
@@ -1458,13 +1458,13 @@ Wire Wire Line
 $Comp
 L Switch:SW_MEC_5E S1
 U 1 1 602729E7
-P 1350 6900
-F 0 "S1" H 1350 7193 50  0000 C CNN
-F 1 "SW_MEC_5E" H 1350 7194 50  0001 C CNN
-F 2 "CAN-USB-dongle:TS-1187A-B-A-B" H 1350 7200 50  0001 C CNN
-F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1350 7200 50  0001 C CNN
-F 4 "C318884" H 1350 6900 50  0001 C CNN "lcsc"
-	1    1350 6900
+P 1600 7250
+F 0 "S1" H 1600 7543 50  0000 C CNN
+F 1 "SW_MEC_5E" H 1600 7544 50  0001 C CNN
+F 2 "CAN-USB-dongle:TS-1187A-B-A-B" H 1600 7550 50  0001 C CNN
+F 3 "" H 1600 7550 50  0001 C CNN
+F 4 "C318884" H 1600 7250 50  0001 C CNN "lcsc"
+	1    1600 7250
 	-1   0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1514,7 +1514,7 @@ Wire Notes Line
 	7000 4400 7000 6500
 Wire Notes Line
 	7000 4400 11200 4400
-Text Notes 3250 6100 0    50   ~ 0
+Text Notes 2250 4950 0    50   ~ 0
 SWD output, to use with\nBlackmagic Probe\nFirmware
 Wire Wire Line
 	3300 5200 3900 5200
@@ -1591,8 +1591,8 @@ F 3 "" H 1750 6000 50  0001 C CNN
 	1    1750 6000
 	1    0    0    -1  
 $EndComp
-Text Notes 800  1250 0    50   ~ 0
-TODO: Check le choix des pin sur le STM32\nTODO: Réf LCSC pour tout les composants\n
+Text Notes 700  2700 0    50   ~ 0
+TODO: Check le choix des pin sur le STM32\nTODO: Réf LCSC pour tout les composants\nTODO: Fix USB footprint anchor
 Text Label 950  5550 0    40   ~ 0
 LED_CAN
 Text Label 950  5950 0    40   ~ 0
@@ -1677,7 +1677,7 @@ Wire Wire Line
 	4050 1100 5200 1100
 Wire Notes Line
 	3000 4650 3000 500 
-Text Notes 3050 4600 0    50   ~ 0
+Text Notes 3050 600  0    50   ~ 0
 Microcontroller
 Wire Notes Line
 	2200 4650 2200 7750
@@ -1685,10 +1685,6 @@ Text Notes 500  4750 0    50   ~ 0
 Debug LEDs
 Wire Notes Line
 	500  4650 7000 4650
-Text Notes 700  1700 0    50   ~ 0
-DOC GOES HERE
-Text Notes 800  1350 0    50   ~ 0
-TODO: ESD protection ->package plus gros stf202\n
 $Comp
 L can-usb-dongle:STF202 U4
 U 1 1 6031690D
@@ -1810,10 +1806,10 @@ F 3 "~" H 10450 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0101
 U 1 1 60535349
 P 9650 1400
-F 0 "#FLG?" H 9650 1475 50  0001 C CNN
+F 0 "#FLG0101" H 9650 1475 50  0001 C CNN
 F 1 "PWR_FLAG" H 9650 1573 50  0001 C CNN
 F 2 "" H 9650 1400 50  0001 C CNN
 F 3 "~" H 9650 1400 50  0001 C CNN
@@ -1824,10 +1820,10 @@ Connection ~ 9650 1400
 Wire Wire Line
 	9650 1400 9750 1400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 6054F18D
 P 10450 4100
-F 0 "#PWR?" H 10450 3850 50  0001 C CNN
+F 0 "#PWR0101" H 10450 3850 50  0001 C CNN
 F 1 "GND" H 10455 3927 50  0000 C CNN
 F 2 "" H 10450 4100 50  0001 C CNN
 F 3 "" H 10450 4100 50  0001 C CNN
