@@ -1085,8 +1085,8 @@ F 3 "" H 6750 7000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 7050 6750 7000
-Text Notes 500  2050 0    50   ~ 0
-Features:\n\n* CAN interface\n* USB-C connector\n* Dual JST CAN connector for daisy chain\n* Dual Picoblade CAN connector for daisy chain\n* Standard SLCAN protocol (virtual serial port)\n* Supports USB flashing through DFU\n* Can power the CAN bus devices\n* UART connector for USB - Serial adapter functionality\n* SWD output to be used as a debugger with\n  Black Magic Probe firmware (software TBD)\n* Costs < 20 USD in components.\n\nRevision history:\n1 - Initial implementation\n2 - Add a missing trace for one LED\n3 - USB-C, design for automated assembly, SWD out\n\n
+Text Notes 500  2100 0    50   ~ 0
+Features:\n\n* CAN interface\n* USB-C connector\n* Dual JST CAN connector for daisy chain\n* Dual Picoblade CAN connector for daisy chain\n* Standard SLCAN protocol (virtual serial port)\n* Supports USB flashing through DFU\n* Can power the CAN bus devices\n* UART connector for USB - Serial adapter functionality\n* SWD output to be used as a debugger with\n  Black Magic Probe firmware (software TBD)\n* Costs < 20 USD in components.\n\nRevision history:\n1 - Initial implementation\n2 - Add a missing trace for one LED\n3 - USB-C, design for automated assembly, SWD out,\n  replaced CAN transceiver for one provided by PCB assembler\n\n
 Wire Wire Line
 	3900 7450 3900 7550
 $Comp
@@ -1521,9 +1521,9 @@ Wire Wire Line
 Wire Wire Line
 	3450 5700 3900 5700
 Text Label 3450 5700 0    40   ~ 0
-UART1_TX
-Text Label 3450 5800 0    40   ~ 0
 UART1_RX
+Text Label 3450 5800 0    40   ~ 0
+UART1_TX
 $Comp
 L Connector_Generic:Conn_01x07 J8
 U 1 1 609D61B2
@@ -1832,4 +1832,6 @@ F 3 "" H 10250 3900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10250 3850 10250 3900
+Text Notes 2250 6500 0    50   ~ 0
+Note that RX & TX are swapped compared to SWD in\nso that we don't need a crossed cable.
 $EndSCHEMATC
