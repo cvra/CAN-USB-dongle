@@ -513,7 +513,6 @@ NoConn ~ 5550 3900
 NoConn ~ 5550 3800
 NoConn ~ 5550 3600
 NoConn ~ 5550 3500
-NoConn ~ 6850 2800
 Wire Wire Line
 	7150 3900 6850 3900
 Wire Wire Line
@@ -522,8 +521,6 @@ Wire Wire Line
 	6850 3600 7150 3600
 Wire Wire Line
 	7150 3700 6850 3700
-Wire Wire Line
-	7350 2700 6850 2700
 Wire Wire Line
 	5550 3000 5150 3000
 Wire Wire Line
@@ -575,7 +572,7 @@ Wire Wire Line
 	3750 1100 4050 1100
 Text Label 5150 2800 0    40   ~ 0
 LED_PWR
-Text Label 7350 2700 2    40   ~ 0
+Text Label 7300 2900 2    40   ~ 0
 V_BUS_SENSE
 Text Label 7300 3000 2    40   ~ 0
 V_BUS_ENABLE
@@ -1427,7 +1424,6 @@ Wire Wire Line
 	6850 3300 7250 3300
 Wire Wire Line
 	5150 2900 5550 2900
-NoConn ~ 6850 2900
 NoConn ~ 5550 3700
 NoConn ~ 6850 3100
 Wire Wire Line
@@ -1518,12 +1514,10 @@ Text Notes 2250 4950 0    50   ~ 0
 SWD output, to use with\nBlackmagic Probe\nFirmware
 Wire Wire Line
 	3300 5200 3900 5200
-Wire Wire Line
-	3450 5700 3900 5700
-Text Label 3450 5700 0    40   ~ 0
-UART1_RX
-Text Label 3450 5800 0    40   ~ 0
-UART1_TX
+Text Label 3200 5700 0    40   ~ 0
+UART2_RX
+Text Label 3200 5800 0    40   ~ 0
+UART2_TX
 $Comp
 L Connector_Generic:Conn_01x07 J8
 U 1 1 609D61B2
@@ -1591,8 +1585,6 @@ F 3 "" H 1750 6000 50  0001 C CNN
 	1    1750 6000
 	1    0    0    -1  
 $EndComp
-Text Notes 700  2700 0    50   ~ 0
-TODO: Check le choix des pin sur le STM32\nTODO: Document on silkscreen\n\n
 Text Label 950  5550 0    40   ~ 0
 LED_CAN
 Text Label 950  5950 0    40   ~ 0
@@ -1714,8 +1706,6 @@ F 3 "" H 3000 5400 60  0000 C CNN
 	1    3000 5400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3900 5800 3450 5800
 $Comp
 L Device:R_Small R14
 U 1 1 603DAE06
@@ -1834,4 +1824,46 @@ Wire Wire Line
 	10250 3850 10250 3900
 Text Notes 2250 6500 0    50   ~ 0
 Note that RX & TX are swapped compared to SWD in\nso that we don't need a crossed cable.
+Wire Wire Line
+	6850 2900 7300 2900
+Text Label 7300 2700 2    50   ~ 0
+UART2_TX
+Text Label 7300 2800 2    50   ~ 0
+UART2_RX
+Wire Wire Line
+	6850 2700 7300 2700
+Wire Wire Line
+	7300 2800 6850 2800
+$Comp
+L Device:R_Small R17
+U 1 1 60521B6B
+P 3650 5700
+F 0 "R17" V 3700 5550 50  0000 C CNN
+F 1 "100" V 3650 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 5700 50  0001 C CNN
+F 3 "~" H 3650 5700 50  0001 C CNN
+F 4 "C25076" V 3650 5700 50  0001 C CNN "lcsc"
+	1    3650 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 605221D4
+P 3650 5800
+F 0 "R18" V 3700 5650 50  0000 C CNN
+F 1 "100" V 3650 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 5800 50  0001 C CNN
+F 3 "~" H 3650 5800 50  0001 C CNN
+F 4 "C25076" V 3650 5800 50  0001 C CNN "lcsc"
+	1    3650 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3200 5700 3550 5700
+Wire Wire Line
+	3550 5800 3200 5800
+Wire Wire Line
+	3750 5700 3900 5700
+Wire Wire Line
+	3900 5800 3750 5800
 $EndSCHEMATC
